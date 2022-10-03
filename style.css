@@ -5,12 +5,70 @@
 
 }
 
-#login-box {
-    padding: 3rem;
+body {
+    min-width: 400px;
+    padding: 2rem;
 }
 
+/* reset / submit buttons */
+.reset-submit-btn {
+    padding: 6px 30px;
+    background-color: lightpink;
+    margin-right: 50px;
+}
+
+.reset-submit-btn:hover {
+    cursor: pointer;
+}
+
+/* labels-inputs */
+.label-input {
+    display: flex;
+    width: 340px;
+    justify-content: space-between;
+}
+
+/* login container */
+#login-registration-container {
+    min-height: 400px;
+    padding-top: 1rem;
+}
+
+#login-box {
+    display: block;
+}
+
+#registration-switch-btn {
+    padding: 6px 30px;
+    margin-bottom: 1rem;
+    background-color: lightgreen;
+}
+
+#registration-switch-btn:hover {
+    scale: 1.2;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* registration container */
 #registration-box {
-    padding: 3rem;
+    display: none;
+}
+
+#login-switch-btn {
+    padding: 6px 30px;
+    margin-bottom: 1rem;
+    background-color: lightblue;
+}
+
+#login-switch-btn:hover {
+    scale: 1.2;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#registration-email-field {
+    min-width: 220px;
 }
 
 #main-title {

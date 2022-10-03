@@ -10,51 +10,65 @@
 
 <body>
 
+<div id="login-registration-container">
+
     <!-- log-in -->
     <form id="login-box">
-        <div id="login">
-            <label for="login-field">Login:</label>
-            <input type="text" id="login-field">
-        </div>
-        <div id="password">
-            <label for="password-field">password:</label>
-            <input type="password" id="password-field" minlength="7" maxlength="16">
-        </div>
 
-        <input type="reset">
-        <input type="submit">
+        <span>Don't have an account? register here:&nbsp;&nbsp;&nbsp;</span>
+        <button type="button" id="registration-switch-btn">Registration</button>
+        
+        <div id="login" class="label-input">
+            <label for="login-field">Login:</label>
+            <input type="text" id="login-field" minlength="6" maxlength="20">
+        </div><br>
+        <div id="password" class="label-input">
+            <label for="password-field">password:</label>
+            <input type="password" id="password-field" minlength="7" maxlength="20">
+        </div><br>
+
+        <input type="reset" class="reset-submit-btn">
+        <input type="submit" id="login-submit-btn" class="reset-submit-btn">
 
     </form>
 
     <!-- registration -->
     <form id="registration-box">
-        <div id="registration-login">
+
+        <button type="button" id="login-switch-btn">Back to Login</button>
+
+        <div id="registration-login" class="label-input">
             <label for="registration-login-field">Login:</label>
-            <input type="text" id="registration-login-field" placeholder="6 - 16 characters">
-        </div>
-        <div id="registration-password">
+            <input type="text" id="registration-login-field" minlength="6" maxlength="20" placeholder="6 - 20 characters">
+        </div><br>
+        <div id="registration-password" class="label-input">
             <label for="registration-password-field">password:</label>
-            <input type="password" id="registration-password-field" minlength="7" maxlength="16">
-        </div>
-        <div id="registration-password-repeat">
+            <input type="password" id="registration-password-field" minlength="7" maxlength="20">
+        </div><br>
+        <div id="registration-password-repeat" class="label-input">
             <label for="registration-password-field-repeat">confirm password:</label>
-            <input type="password" id="registration-password-field-repeat" minlength="7" maxlength="16">
-        </div>
-        <div id="registration-nickname">
+            <input type="password" id="registration-password-field-repeat" minlength="7" maxlength="20">
+        </div><br>
+        <div id="registration-nickname" class="label-input">
             <label for="registration-nickname-field">nickname:</label>
             <input type="text" id="registration-nickname-field" minlength="3" maxlength="20" placeholder="(in game) 3 - 20 characters">
-        </div>
-        <div id="registration-email">
+        </div><br>
+        <div id="registration-email" class="label-input">
             <label for="registration-email-field">e-mail:</label>
-            <input type="email" id="registration-email-field" minlength="3" maxlength="20" placeholder="name@gmail.com">
-        </div>
+            <input type="email" id="registration-email-field" minlength="6" maxlength="40" placeholder="name@gmail.com">
+        </div><br>
+        <div id="registration-agreement" class="label-input">
+            <label for="registration-agreement-checkbox">I agree with terms and conditions:</label>
+            <input type="checkbox" id="registration-agreement-checkbox">
+        </div><br>
 
-        <input type="reset">
-        <input type="submit">
+        <input type="reset" class="reset-submit-btn">
+        <input type="submit" id="registration-submit-btn" class="reset-submit-btn">
 
     </form>
+</div>
 
-
+    <!-- color switchers -->
     <div id="title-section">
         <h1 id="main-title">Gooooo</h1>
         <div id="color-buttons">
