@@ -18,6 +18,8 @@ body {
 }
 
 .reset-submit-btn:hover {
+    scale: 1.1;
+    transition: 0.3s;
     cursor: pointer;
 }
 
@@ -36,6 +38,10 @@ body {
 
 #login-box {
     display: block;
+}
+
+#login-box p {
+    margin: 1rem;
 }
 
 #registration-switch-btn {
@@ -71,6 +77,22 @@ body {
     min-width: 220px;
 }
 
+#success-registration-message {
+    display: none;
+}
+
+#success-registration-message h4 {
+    color: limegreen;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+#success-registration-message p {
+    margin: 0.6rem;
+    font-size: 1.2rem;
+}
+
+/* test section */
 #main-title {
     display: block;
     position: relative;

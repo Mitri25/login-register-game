@@ -21,7 +21,7 @@ function showLogin() {
     loginSection.style.display = "block";
 };
 
-// login check
+// -------------------login check--------------------
 let login = "admin1234";
 let loginField = document.getElementById("login-field");
 let password = "password1234";
@@ -65,7 +65,65 @@ function passLogin(e) {
 };
 
 
-// registration check
+// --------------------registration check-----------------
+let registrationLoginField = document.getElementById("registration-login-field");
+let registrationPasswordField = document.getElementById("registration-password-field");
+let registrationPasswordFieldRepeat = document.getElementById("registration-password-field-repeat");
+let registrationNicknameField = document.getElementById("registration-nickname-field");
+let registrationEmailField = document.getElementById("registration-email-field");
+let agreeCheckbox = document.getElementById("registration-agreement-checkbox");
+const registrationSubmit = document.getElementById("registration-submit-btn");
+
+
+registrationSubmit.addEventListener("click", passRegistration);
+
+function passRegistration(e) {
+    let successRegistrationMessage = document.getElementById("success-registration-message");
+    let errorMessages = [];
+
+    if (registrationLoginField.value.length < 6) {
+        errorMessages.push("Login must be at least 6 characters\n");
+    }
+
+    if (registrationPasswordField.value.length < 7) {
+        errorMessages.push("Password must be at least 7 characters\n");
+    }
+
+    if (registrationPasswordFieldRepeat.value != registrationPasswordField.value) {
+        errorMessages.push("Your passwords are not equal! \n Password confirmation needs to be same as password\n");
+    }
+
+    if (registrationNicknameField.value.length < 3) {
+        errorMessages.push("Nickname must be at least 3 characters\n");
+    }
+
+    function checkMail(emailField) {
+        return emailField.value.includes("@") ? true : false;
+    };
+
+    let emailOK = checkMail(registrationEmailField);
+    if (!emailOK) {
+        errorMessages.push('Email does not contain "@"\n');
+    }
+
+    if (!agreeCheckbox.checked) {
+        errorMessages.push("You need to agree with terms and conditions to proceed");
+    }
+
+    if (errorMessages.length > 0) {
+        e.preventDefault();
+        window.alert(errorMessages);
+    }
+    else {
+        e.preventDefault();
+        successRegistrationMessage.style.display = "block";
+        login = registrationLoginField.value;
+        password = registrationPasswordField.value;
+    }
+
+
+
+};
 
 
 
