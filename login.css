@@ -93,7 +93,7 @@ body {
 }
 
 /* test section */
-#main-title {
+/* #main-title {
     display: block;
     position: relative;
     text-align: center;
@@ -110,4 +110,4 @@ body {
 #title-section {
     background-color: rgb(0, 149, 255);
     border: 5px solid black;
-}
+} */
