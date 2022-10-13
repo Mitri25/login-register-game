@@ -8,7 +8,47 @@
     <link rel="stylesheet" href="/game.css">
 </head>
 <body>
-    <h1>Game Page!</h1>
+    <h1>Rock paper scissor game:</h1>
+    <h2>choose your option:</h2>
+    <form>
+        <label for="player-choice"></label>
+        
+        <div>
+            <label for="rock-radio-btn">rock:</label>
+            <input type="radio" id="rock-radio-btn" name="player-choice" value="rock">
+        </div>
+        <div>
+            <label for="paper-radio-btn">paper:</label>
+            <input type="radio" id="paper-radio-btn" name="player-choice" value="paper">
+        </div>
+        <div>
+            <label for="scissors-radio-btn">scissors:</label>
+            <input type="radio" id="scissors-radio-btn" name="player-choice" value="scissors">
+        </div>
+        <div>
+            <label for="choice-submit-btn"></label>
+            <input type="submit" id="choice-submit-btn" value="   PLAY   ">
+        </div>
+    </form>
+
+    <div id="score-board">
+        <h2>SCORE:</h2>
+        <h2>YOU: 0 pts</h2>
+        <h2>COMPUTER: 0 pts</h2>
+    </div>
+    <div id="pictures-container">
+        <h2 id="winner-message">Winner!</h2>
+        <div id="user-field">
+            <h3>Your choice:</h3>
+            <img src="/images/rock.jpg" alt="">
+            <h3>ROCK</h3>
+        </div>
+        <div id="computer-field">
+            <h3>Computer choice:</h3>
+            <img src="/images/rock.jpg" alt="">
+            <h3>ROCK</h3>
+        </div>
+    </div>
     <script src="/game.js"></script>
 </body>
 </html>

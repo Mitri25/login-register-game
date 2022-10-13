@@ -6,6 +6,69 @@
 }
 
 body {
-    min-width: 400px;
+    min-width: 460px;
     padding: 2rem;
+}
+
+h1 {
+    margin: 2rem 0rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+form {
+    margin: 10px;
+    display: flex;
+    gap: 1.5rem;
+}
+
+form label {
+    background-color: aquamarine;
+}
+
+#choice-submit-btn {
+    padding: 5px 20px;
+}
+
+#choice-submit-btn:hover {
+    scale: 1.2;
+    transition: 0.2s;
+}
+
+#score-board {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    justify-content: space-around;
+    margin: 1rem 0rem;
+}
+
+#pictures-container {
+    position: relative;
+    display: flex;
+    min-width: 400px;
+    gap: 1rem;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+}
+
+#winner-message {
+    visibility: visible;
+    position: absolute;
+    display: flex;
+    align-self: center;
+    margin-left: 10%;
+    font-size: 4rem;
+    color: limegreen;
+    background-color: black;
+    padding: 1rem;
 }
