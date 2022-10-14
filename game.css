@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
@@ -52,6 +52,7 @@ form label {
 #pictures-container {
     position: relative;
     display: flex;
+    text-align: center;
     min-width: 400px;
     gap: 1rem;
 }
