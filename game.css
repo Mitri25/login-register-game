@@ -7,6 +7,7 @@
 
 body {
     min-width: 460px;
+    max-width: 900px;
     padding: 2rem;
 }
 
@@ -34,6 +35,8 @@ form label {
 
 #choice-submit-btn {
     padding: 5px 20px;
+    border-radius: 5px;
+    background-color: greenyellow;
 }
 
 #choice-submit-btn:hover {
@@ -44,10 +47,32 @@ form label {
 #score-board {
     display: flex;
     flex-wrap: wrap;
-    max-width: 800px;
     justify-content: space-around;
     margin: 1rem 0rem;
 }
+
+#round-message {
+    padding: 1rem 0rem;
+    color: gray;
+    text-align: center;
+
+    /* animation: roundMessageIdle;
+    animation-duration: 2s; */
+}
+
+@keyframes roundMessage {
+    from {
+        opacity: 20%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+/* @keyframes roundMessageIdle {
+    100% {}
+} */
 
 #pictures-container {
     position: relative;
@@ -63,13 +88,22 @@ img {
 }
 
 #winner-message {
-    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
     position: absolute;
     display: flex;
     align-self: center;
     margin-left: 10%;
-    font-size: 4rem;
-    color: limegreen;
     background-color: black;
     padding: 1rem;
+}
+
+#winner-message h2 {
+    font-size: 4rem;
+    color: limegreen;
+}
+
+#winner-message h3 {
+    color: lightgray;
 }
