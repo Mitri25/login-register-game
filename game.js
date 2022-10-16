@@ -6,7 +6,8 @@ let playerPoints = 0;
 let computerPoints = 0;
 
 const roundMessage = document.getElementById("round-message");
-
+const winnerMessage = document.getElementById("winner-message");
+let gameOver = false;
 
 playButton.addEventListener("click", play);
 
@@ -14,8 +15,8 @@ function play(e) {
     e.preventDefault();
     // roundMessage.style.animation = "";
     // roundMessage.style.animation = "roundMessage 2s";
-    roundMessage.classList.remove("roundMessage");
-    roundMessage.classList.add("roundMessage");
+    // roundMessage.classList.remove("roundMessage");
+    // roundMessage.classList.add("roundMessage");
 
     let playerChoice;
     let computerChoice;
@@ -138,7 +139,6 @@ function play(e) {
 
 
     // end of the game check
-    const winnerMessage = document.getElementById("winner-message");
     const winnerMessageDecision = document.getElementById("winner-message-decision");
     const winnerMessageSummary = document.getElementById("winner-message-summary");
 
@@ -157,7 +157,50 @@ function play(e) {
         }
 
         winnerMessage.style.visibility = "visible";
+        playButton.value = "Play again";
+        playButton.style.backgroundColor = "orange";
+        gameOver = true;
 
     }
 
+    // restart game
+    if (gameOver) {
+        playButton.removeEventListener("click", play);
+        playButton.addEventListener("click", restartGame);  // restart works also without this, but refreshes page...
+    }
+
+    const radioButtons = document.getElementsByName("player-choice");
+
+    function restartGame(e) {
+        e.preventDefault();
+        console.log("restarting gameeeeeee");
+
+        // resetting all values
+        winnerMessage.style.visibility = "hidden";
+        playButton.value = "   PLAY   ";
+        playButton.style.backgroundColor = "greenyellow";
+        playerPoints = 0;
+        playerPointsDisplay.textContent = `YOU: ${playerPoints} pts`;
+        computerPoints = 0;
+        computerPointsDisplay.textContent = `COMPUTER: ${computerPoints} pts`;
+        roundMessage.textContent = "start first round in best of 5 game";
+        roundMessage.style.textShadow = "none";
+        roundMessage.style.color = "gray";
+        playerImg.src = "/images/rock.jpg";
+        playerSymbol.textContent = "ROCK";
+        computerImg.src = "/images/rock.jpg";
+        computerSymbol.textContent = "ROCK";
+        playButton.removeEventListener("click", restartGame);
+        playButton.addEventListener("click", play);
+        resetRadionButtons(radioButtons);
+        gameOver = false;
+    }
+
+    function resetRadionButtons(array) {
+        array.forEach(element => {
+            element.checked = false;
+        });
+    }
 };
+
+
