@@ -1,11 +1,9 @@
 
-
 // switching login / registration section
 const loginSection = document.getElementById("login-box");
 const registrationSection = document.getElementById("registration-box");
 const registrationSwitchButton = document.getElementById("registration-switch-btn");
 const loginSwitchButton = document.getElementById("login-switch-btn");
-
 
 registrationSwitchButton.addEventListener("click", showRegistration);
 
@@ -20,6 +18,7 @@ function showLogin() {
     registrationSection.style.display = "none";
     loginSection.style.display = "block";
 };
+
 
 // -------------------login check--------------------
 let login = "admin1234";
@@ -41,7 +40,6 @@ function passLogin(e) {
     if (password = sessionStorage.getItem("password")) {
         password = sessionStorage.getItem("password");
     };
-
 
     function loginCheck(login, loginField) {
         if (loginField.value == login || loginField.value == "admin1234") {
@@ -83,7 +81,6 @@ let registrationNicknameField = document.getElementById("registration-nickname-f
 let registrationEmailField = document.getElementById("registration-email-field");
 let agreeCheckbox = document.getElementById("registration-agreement-checkbox");
 const registrationSubmit = document.getElementById("registration-submit-btn");
-
 
 registrationSubmit.addEventListener("click", passRegistration);
 
@@ -129,33 +126,5 @@ function passRegistration(e) {
         successRegistrationMessage.style.display = "block";
         sessionStorage.setItem("login", registrationLoginField.value);
         sessionStorage.setItem("password", registrationPasswordField.value);
-
     }
-
-
-
 };
-
-
-
-
-// // color buttons
-// const title = document.getElementById("main-title");
-
-// const colorButton = document.getElementById("change-color-btn").onclick = function () {
-//     if (title.style.color == "black") {
-//         title.style.color = "purple";
-//     }
-//     else {
-//         title.style.color = "black";
-//     }
-
-// };
-
-// const greenColorButton = document.getElementById("change-color-green-btn");
-// greenColorButton.addEventListener("click", changeGreen);
-
-// function changeGreen() {
-//     title.style.color = "green";
-// };
-
